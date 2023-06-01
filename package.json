@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-ipfs-free",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "IPFS free upload provider for Strapi",
   "main": "lib/index.js",
   "scripts": {

@@ -178,5 +178,3 @@ module.exports = [
 - [Lighthouse website](https://lighthouse.storage/)
 
 ---
-
-`(c)` Alex Baker
