@@ -23,7 +23,7 @@ module.exports = ({ env }) => ({
     config: {
       provider: "strapi-provider-upload-ipfs-storage",
       providerOptions: {
-        config: {
+        providers: {
           filebase: [{
             // https://console.filebase.com/keys
             key: env("FILEBASE_KEY"),
