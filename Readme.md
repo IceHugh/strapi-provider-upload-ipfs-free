@@ -24,32 +24,32 @@ module.exports = ({ env }) => ({
       provider: "strapi-provider-upload-ipfs-storage",
       providerOptions: {
         config: {
-          filebase: {
+          filebase: [{
             // https://console.filebase.com/keys
             key: env("FILEBASE_KEY"),
             secret: env("FILEBASE_SECRET"),
             bucket: env("FILEBASE_BUCKET"),
-          },
-          pinata: {
+          }],
+          pinata: [{
             // https://app.pinata.cloud/keys
             key: env("PINATA_KEY"),
             secret: env("PINATA_KEY"),
-          },
-          everland: {
+          }],
+          everland: [{
             // https://docs.4everland.org/storage/bucket/s3-compatible-api
             key: env("EVERLAND_KEY"),
             secret: env("EVERLAND_SECRET"),
             bucket: env("EVERLAND_BUCKET"),
-          },
-          web3: {
+          }],
+          web3: [{
             // https://web3.storage/tokens/
             token: env("WEB3_TOKEN"),
-          },
-          lighthouse: {
+          }],
+          lighthouse: [{
             // https://files.lighthouse.storage/dashboard/apikey
             token: env("LIGHTHOUSE_TOKEN"),
-          },
-        }
+          }],
+        },
         options: {
           default: 'filebase',
           random: false,
