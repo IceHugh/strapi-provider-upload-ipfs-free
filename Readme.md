@@ -21,7 +21,7 @@ module.exports = ({ env }) => ({
   // ...
   upload: {
     config: {
-      provider: "strapi-provider-upload-ipfs-storage",
+      provider: "strapi-provider-upload-ipfs-free",
       providerOptions: {
         providers: {
           filebase: [{
