@@ -11,6 +11,9 @@ yarn add strapi-provider-upload-ipfs-free
 # using npm
 npm install strapi-provider-upload-ipfs-free --save
 ```
+## Image Compression 
+
+When a picture is detected, you can enable compression and use ```sharp``` to output the picture in webp format.
 
 ### Providers Configuration
 
@@ -53,6 +56,10 @@ module.exports = ({ env }) => ({
         options: {
           default: 'filebase',
           random: false,
+          compression:  {
+            enabeld: false,
+            quality: 70,
+          }
         }
       },
     },
@@ -82,8 +89,12 @@ LIGHTHOUSE_TOKEN=""
 
 ## options params
 
-- default (Specify to select one of config provider)
-- random (randomly choose one of config provider)
+| Variable | Type   | Description            | Required | Default |
+|----------|--------|------------------------|----------|--------|
+| default | string | Specify to select one of config provider   | no  | web3|
+| random   | boolean | randomly choose one of config provider | no  | false|
+| compression.enbaled   | boolean | Whether to enable image compression and convert it to webp  | no | false|
+| compression.quality   | number | Image Compression Quality | no | 70|
 
 ## Filebase Variable [ [tutorial](https://docs.filebase.com/configurations/third-party-configurations/backup-client-configurations/strapi-provider-plugin) ]
 
